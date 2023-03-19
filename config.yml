@@ -1,0 +1,4 @@
+spectaql:
+  targetDir: dist
+introspection:
+  url: https://api.otomadb.com/graphql

@@ -1,0 +1,8 @@
+# Nix
+.direnv
+
+# Deps
+node_modules/
+
+# Output
+dist/
