@@ -13,30 +13,32 @@
       inputs.flake-utils.follows = "flake-utils";
     };
   };
-  outputs =
-    { self
-    , nixpkgs
-    , flake-utils
-    , ...
-    } @ inputs:
+  outputs = {
+    self,
+    nixpkgs,
+    flake-utils,
+    ...
+  } @ inputs:
     flake-utils.lib.eachDefaultSystem (
-      system:
-      let
+      system: let
         pkgs = import nixpkgs {
           inherit system;
           overlays = with inputs; [
             devshell.overlays.default
           ];
         };
-      in
-      {
+      in {
         devShells.default = pkgs.devshell.mkShell {
-          packages = (with pkgs;
-            [
+          packages =
+            (with pkgs; [
+              actionlint
               alejandra
+              miniserve
               yamlfmt
+            ])
+            ++ [
               inputs.spectaql.packages.${system}.spectaql
-            ]);
+            ];
         };
       }
     );

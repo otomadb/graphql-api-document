@@ -1,8 +1,8 @@
 # Nix
 .direnv
 
-# Deps
-node_modules/
+# VSCode
+.vscode/settings.json
 
 # Output
-dist/
+dist
