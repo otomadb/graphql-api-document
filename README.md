@@ -1,3 +1,3 @@
-# API Document for Otomadb
+# Document of OtoMADB GraphQL API
 
-GraphQL API Document by [SpectaQL](https://github.com/anvilco/spectaql).
+https://otomadb.github.io/graphql-api-document/
