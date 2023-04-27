@@ -58,7 +58,31 @@
       "inputs": {
         "devshell": "devshell",
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "spectaql": "spectaql"
+      }
+    },
+    "spectaql": {
+      "inputs": {
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1682596500,
+        "narHash": "sha256-LgmSSq91Hv8R6SAW+YLYdRxPJ+Z3IXnO2aS7LobQwEQ=",
+        "owner": "otomadb",
+        "repo": "spectaql.nix",
+        "rev": "7570365e76df237af29844a435045eb0620f7cde",
+        "type": "github"
+      },
+      "original": {
+        "owner": "otomadb",
+        "repo": "spectaql.nix",
+        "type": "github"
       }
     }
   },
